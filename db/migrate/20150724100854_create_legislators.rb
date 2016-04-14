@@ -37,3 +37,4 @@ class CreateLegislators < ActiveRecord::Migration
     end
   end
 end
+  

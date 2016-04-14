@@ -1,4 +1,17 @@
 class Senator < Legislator
+	:firstname
+	:lastname
+	:phone
+	:fax
+	:website
+	:webform
+	:party
+	:gender
+	:birthdate
+	:twitter_id
+	:state
+	:in_office
+
 
 	def self.senator_state(name_state)
 		list1 = self.where("state = ? AND title = ?", "name_state", "Sen").first
@@ -20,7 +33,7 @@ class Senator < Legislator
 
 	def office(firstname, lastname)
 		sen = self.where("firstname = ? AND lastname = ?", firstname, lastname)
-		puts sen.office
+		puts sen.in_office
 	end
 
 end

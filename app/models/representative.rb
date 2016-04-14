@@ -1,10 +1,18 @@
 class Representative < Legislator
+	:firstname
+	:lastname
+	:phone
+	:fax
+	:website
+	:webform
+	:party
+	:gender
+	:birthdate
+	:twitter_id
+	:state
+	:in_office
+	:name_suffix	
 
-:firstname
-:lastname
-:party
-:title
-:name_suffix
 
 	def pol_party(party)
 		list = self.where("party = ? AND title = ?", party, "Rep")
@@ -19,7 +27,7 @@ class Representative < Legislator
 
 	def office(firstname, lastname)
 		rep = self.where("firstname = ? AND lastname = ?", firstname, lastname)
-		puts rep.office
+		puts rep.in_office
 	end
 
 end

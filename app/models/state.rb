@@ -2,7 +2,6 @@ class Legislator < ActiveRecord::Base
 
 	:title
 	:firstname
-	:middlename
 	:lastname
 	:name_suffix
 	
